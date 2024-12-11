@@ -1,0 +1,150 @@
+GitHub Management
+
+
+Here’s a clear, step-by-step guide for creating and collaborating on a GitHub repository for your team social media project. Each step is divided for the repository creator and individual team members.
+
+---
+
+### Step 1: Repository Creation (Repository Owner)
+
+1. **Create a New Repository**:
+   - Go to [GitHub](https://github.com/) and log in.
+   - Click on **New** (usually under your profile or on your dashboard).
+   - Name your repository (e.g., `University-Social-Media`) and make it **Private** (optional, but recommended for limited access).
+   - Initialize with a README (optional).
+   - Click **Create repository**.
+
+2. **Add Collaborators**:
+   - Navigate to the repository’s **Settings** > **Manage Access**.
+   - Under “Manage Access,” invite each team member as a **Collaborator** by entering their GitHub usernames or emails.
+   - Team members will receive an email to accept the invitation and gain write access.
+
+---
+
+### Step 2: Repository Setup and Initial Commit (Repository Owner)
+
+1. **Clone the Repository**:
+   - On your local machine, open your terminal.
+   - Clone the repo using: `git clone <repository-url>`
+   - Move into the directory: `cd <repository-name>`
+
+2. **Create Main Project Files**:
+   - Set up an initial file structure for the project (e.g., folders for `frontend`, `backend`, or a general project skeleton).
+   - Make an initial commit:
+     ```bash
+     git add .
+     git commit -m "Initial project setup"
+     git push origin main
+     ```
+
+3. **Push Changes**:
+   - Push all changes to the remote repository with `git push origin main`.
+
+---
+
+### Step 3: Each Member Clones the Repository
+
+1. **Clone the Repository**:
+   - Each team member goes to the repository on GitHub and clicks on **Code** > **Clone**.
+   - Choose **HTTPS** or **SSH** and copy the link.
+   - In your terminal, use:
+     ```bash
+     git clone <repository-url>
+     ```
+   - Navigate into the repository folder with `cd <repository-name>`.
+
+---
+
+### Step 4: Creating Individual Branches (Each Member)
+
+Each member can create a branch for the feature they are working on. This avoids conflicts and organizes the project effectively.
+
+1. **Create a Branch**:
+   - Choose a branch name relevant to your feature, such as `auth-feature`, `feed-creation`, etc.
+   - Use:
+     ```bash
+     git checkout -b branch-name
+     ```
+   - Example:
+     ```bash
+     git checkout -b auth-feature
+     ```
+
+2. **Work on Your Feature**:
+   - Make changes in your branch as needed.
+   - Regularly save and commit your changes:
+     ```bash
+     git add .
+     git commit -m "Added login functionality"
+     ```
+
+3. **Push the Branch to GitHub**:
+   - When your feature is ready or you want to back up your progress:
+     ```bash
+     git push origin branch-name
+     ```
+   - Example:
+     ```bash
+     git push origin auth-feature
+     ```
+
+---
+
+### Step 5: Creating a Pull Request (PR) (Each Member)
+
+When a feature is ready for review and merging into the main branch, you create a Pull Request (PR).
+
+1. **Go to GitHub**:
+   - Navigate to the repository and click on the **Pull requests** tab.
+
+2. **Create a New Pull Request**:
+   - Select **New Pull Request**.
+   - Choose your feature branch as the base (e.g., `auth-feature`) and set it to merge into `main`.
+   - Write a description of the changes for clarity.
+
+3. **Submit for Review**:
+   - Assign reviewers (other team members) to approve the PR.
+   - Team members can review, add comments, and approve.
+
+4. **Merge**:
+   - Once reviewed, the PR can be merged into the main branch.
+   - Delete the feature branch from GitHub (optional, for keeping the repo clean).
+
+---
+
+### Step 6: Pull Updates from Main Branch (All Members)
+
+It’s important to stay up-to-date with the main branch as other features are merged.
+
+1. **Switch to the Main Branch**:
+   ```bash
+   git checkout main
+   ```
+
+2. **Pull the Latest Changes**:
+   ```bash
+   git pull origin main
+   ```
+
+3. **Update Your Branch (If Necessary)**:
+   - If you are working on an existing branch, update it with the latest main branch changes:
+     ```bash
+     git checkout your-branch-name
+     git merge main
+     ```
+
+---
+
+### Step 7: Repeat for Each New Feature
+
+1. **Create a New Branch for Each Feature**:
+   - Repeat Steps 4 to 6 for each new feature by creating a new branch, making changes, and following the PR process.
+
+2. **Regularly Communicate**:
+   - Use tools like GitHub Issues or project boards for tracking who is working on what to avoid overlap.
+
+---
+
+### Summary Workflow:
+
+- **Create Repo** → **Add Collaborators** → **Clone Repo** → **Create Branches** → **Code and Push to Branch** → **Create PRs for Review** → **Merge PRs into Main**

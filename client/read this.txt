@@ -1,0 +1,21 @@
+Reference: https://github.com/safak/youtube
+
+KIIT Social
+
+Google Fonts:
+fonts.google.com
+
+
+...................
+Material Icons
+Material UI Material Icons
+npm install @mui/icons-material
+
+npm install @mui/material @emotion/react @emotion/styled
+
+Use: import { Search, Person, Chat, Notifications } from '@mui/icons-material';
+
+........................
+Setup Tailwindcss(After Create React App)
+npm install -D tailwindcss
+npx tailwindcss init
